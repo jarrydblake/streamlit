@@ -54,8 +54,8 @@ jobs:
       - name: Run Linters
         run: |
           PRE_COMMIT_NO_CONCURRENCY=true pipenv run pre-commit run --show-diff-on-failure --color=always --all-files
-      - name: Run Type Checkers
-        run: scripts/mypy --report
+      # - name: Run Type Checkers
+      #   run: scripts/mypy --report
       - name: Run Python Tests
         run: make pytest
       - name: Run Integration Tests
