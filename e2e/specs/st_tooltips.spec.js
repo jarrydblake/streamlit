@@ -116,12 +116,12 @@ describe("tooltip text with dedent on widgets", () => {
     cy.get("[data-testid=stMarkdownContainer]").should('contain', defaultTooltip);
   });
 
-
+  // FAIL
   it("Display text properly on tooltips on numberinput", () => {
     cy.get(`.stNumberInput .stTooltipIcon`)
       .invoke("show")
       .click();
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock1
     );
@@ -137,11 +137,12 @@ describe("tooltip text with dedent on widgets", () => {
     );
   });
 
+  // FAIL
   it("Display text properly on tooltips on radio", () => {
     cy.get(`.stRadio .stTooltipIcon`)
       .invoke("show")
       .click();
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock2
     );
@@ -157,11 +158,12 @@ describe("tooltip text with dedent on widgets", () => {
     );
   });
 
+  // FAIL
   it("Display text properly on tooltips on timeinput", () => {
     cy.get(`.stTimeInput .stTooltipIcon`)
       .invoke("show")
       .click();
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock1
     );
@@ -178,12 +180,13 @@ describe("tooltip text with dedent on widgets", () => {
   });
 
   //This one needs to be the first slider
+  // FAIL
   it("Display text properly on tooltips on sliders", () => {
     cy.get(`.stSlider .stTooltipIcon`)
       .eq(0)
       .invoke("show")
       .click();
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock2
     );
@@ -209,12 +212,13 @@ describe("tooltip text with dedent on widgets", () => {
     );
   });
 
+  // FAIL
   it("Display text properly on tooltips on multiselect", () => {
     cy.get(`.stMultiSelect .stTooltipIcon`)
       .invoke("show")
       .click({ force: true })
       .trigger("mouseover", {force: true});
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock1
     );
@@ -231,12 +235,13 @@ describe("tooltip text with dedent on widgets", () => {
     );
   });
 
+  // FAIL
   it("Display text properly on tooltips on sliders", () => {
     cy.getIndexed(".stSlider .stTooltipIcon", 1)
       .invoke("show")
       .trigger("mouseenter", { force: true })
       .trigger("mouseover", { force: true });
-    cy.get("[data-testid=stMarkdownContainer] .stCodeBlock").should(
+    cy.get(".stCodeBlock").should(
       "contain",
       tooltipCodeBlock2
     );
