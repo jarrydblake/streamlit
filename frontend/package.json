@@ -121,7 +121,7 @@
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/jest": "^11.10.5",
     "@loaders.gl/images": "2.3.13",
-    "@testing-library/dom": "^7.31.0",
+    "@testing-library/dom": "^8.19.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.1.9",
